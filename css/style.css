@@ -15,7 +15,6 @@ header, main, footer{
 header{
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 1rem;
     grid-area: header;
 }
 
@@ -51,6 +50,13 @@ header nav div{
 
 }
 
+.responsive a{
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
 .black-bt{
     display: inline-block;
     padding: 1rem;
@@ -58,14 +64,7 @@ header nav div{
     background-color: aqua;
     color: palegreen;
     border-radius: 5px;
-    font-weight: 500;
-}
-
-.responsive a{
-    color: white;
-    display: inline-block;
-    padding: 1rem;
-    text-decoration: none;
+    font-weight: 400;
 }
 
 main{
@@ -80,7 +79,30 @@ footer{
     grid-area: footer;
 }
 
+#services{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+#services h2{
+    width: 100%;
+    text-align: center;
+}
+
+#services article{
+    max-width: 300px;
+    width: 100%;
+    min-width: 200px;
+}
+
 @media only screen and (min-width:600px){
+    #grid-container{
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
     .navbar{
         display: flex;
         flex-direction: row;
@@ -93,5 +115,19 @@ footer{
         display: none;
     }
 
-    
+.flex-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-section section{
+    width: 40%;
+    align-self: center;
+    padding: 1rem;
+}
+
+.right img{
+    order: 1;
+}
 }
